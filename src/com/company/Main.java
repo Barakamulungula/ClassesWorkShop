@@ -7,7 +7,11 @@ public class Main {
 	// write your code here
         Cat cat = new Cat("Baraka","Garfield","123 Something ST", 5, 'M',true,true, "Ginger");
 
-        cat.catYear();
+        System.out.println(cat.catYear());
+
+        Dog dog = new Dog("Baraka","Scooby","123 Something ST", 5, 'M',true,true, "Brown");
+
+        System.out.println(dog.inDogYears());
 
 
     }

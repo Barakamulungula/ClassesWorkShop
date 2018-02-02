@@ -45,12 +45,20 @@ public class Cat extends Pet{
         return "meow";
     }
 
-    protected void catYear(){
+    protected String catYear(){
+        String convertedAge;
         switch(getAge()){
-            case 0: System.out.println(getPetName()+" is " + 0 + "in human years and " + 0 +" in cat years" );break;
-            case 1: System.out.println(getPetName()+" is " + 19 + "in human years and " + 19 +" in cat years" );break;
-            default: System.out.println(getPetName()+" is " + getAge() +  " in human years and " + ((getAge()-2)*4+24) + " in cat years");break;
-        }
+            case 0:
+                convertedAge = getPetName()+" is " + 0 + "in human years and " + 0 +" in cat years" ;
+            break;
+            case 1:
+                convertedAge = getPetName()+" is " + 19 + "in human years and " + 19 +" in cat years";
+            break;
+            default:
+                convertedAge = getPetName()+" is " + getAge() +  " in human years and " + ((getAge()-2)*4+24) + " in cat years";
+            break;
 
+        }
+        return convertedAge;
     }
 }
