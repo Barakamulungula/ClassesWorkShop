@@ -4,20 +4,16 @@ public class Pet {
 
     private String ownerName;
     private String petName;
-    private long uniqueId;
     private String homeAddress;
     private int age;
     private char gender;
 
-    public long getUniqueId() {
-        return uniqueId;
-    }
-
-    public void setUniqueId() {
-        int lower = 1000;
-        int higher = 100000;
-
-        this.uniqueId = (int)(Math.random() * (higher-lower)) + lower;
+    public Pet(String ownerName, String petName, String homeAddress, int age, char gender) {
+        this.ownerName = ownerName;
+        this.petName = petName;
+        this.homeAddress = homeAddress;
+        this.age = age;
+        this.gender = gender;
     }
 
     public String getOwnerName() {
@@ -58,5 +54,9 @@ public class Pet {
 
     public void setGender(char gender) {
         this.gender = gender;
+    }
+
+    protected String makeSound(){
+        return "Pets don't make sounds";
     }
 }
