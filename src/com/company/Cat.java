@@ -46,19 +46,18 @@ public class Cat extends Pet{
     }
 
     protected String catYear(){
-        String convertedAge;
+        int convertedAge;
         switch(getAge()){
             case 0:
-                convertedAge = getPetName()+" is " + 0 + "in human years and " + 0 +" in cat years" ;
+                convertedAge = 0;
             break;
             case 1:
-                convertedAge = getPetName()+" is " + 19 + "in human years and " + 19 +" in cat years";
+                convertedAge = 19;
             break;
             default:
-                convertedAge = getPetName()+" is " + getAge() +  " in human years and " + ((getAge()-2)*4+24) + " in cat years";
+                convertedAge = ((super.getAge()-2)*4+24);
             break;
-
         }
-        return convertedAge;
+        return super.getPetName()+" is " + super.getAge() + " in human years and " + convertedAge +" in cat years";
     }
 }

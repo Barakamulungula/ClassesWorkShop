@@ -46,7 +46,7 @@ public class Dog extends Pet {
     }
 
     protected String inDogYears(){
-        return getPetName()+" is " + getAge() + " in human years and " + (getAge()*7) +" in dog years";
+        return super.getPetName()+" is " + super.getAge() + " in human years and " + (super.getAge()*7) +" in dog years";
     }
 
 
